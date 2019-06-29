@@ -26,8 +26,8 @@ int score[]={78,97,87,56,87,98,86,93,91,82,72};
 int main() //range for 3.6
 {
 string wrod("I love you,carina");
-for(auto &a:word)
-	a='X';
+for(auto &a : word)
+	a = 'X';
 cout << word <<endl;
 }
 
@@ -37,9 +37,37 @@ for(char &a : word)
 	a='X';
 cout << a << endl;
 
-int main()
+int main() //练习3.8 while
 {
-	string word("I love you,carina")
-	int i=0;
-	while(i<= word.size()）
-	
+	string word("I love you,carina");
+	unsigned i=0;
+	while(i<= word.size())
+	{
+		word[i] = 'X';
+		i++;
+	}
+	cout << word << endl;
+}
+
+int main() //练习3.8 for
+{
+	string word("I love you,carina");
+	for(unsigned i=0;i <= word.size();i++)
+	{
+		word[i]='X';
+	}
+	cout << word <<endl;
+}
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() //练习3.10
+{
+	string word;
+	getline(cin, word);
+		for (auto s : word)
+			if (!ispunct(s))
+				cout << s ;
+}

@@ -1,5 +1,5 @@
 #include <iostream>
-  using namespace std;
+using namespace std;
 //冒泡排序
 int main()
 {

@@ -1,0 +1,37 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+using std::vector;
+
+int main() //遍历int数组
+{
+    vector<int> v3(10,42);
+    for(auto it = v3.begin();it != v3.end() && !isspace(*it))
+        cout << *it <<endl;
+}
+
+int main() // 遍历string组
+{
+    vector<string> v3{10,"Hi"}
+    for(auto it = v3.begin();it != v3.end() && !it -> empty();++it)
+        cout << *it << endl;
+}       
+
+int main() //把首个单词改写成大写 3.22
+{
+	string s("some thing");
+	for (auto it = s.begin(); it != s.end() && !isspace(*it); ++it)
+		*it = toupper(*it);
+	cout << s << endl;
+}
+
+int main() //输入的数字翻倍3.23
+{
+	vector<int> num{ 12,443,45,5,45,67,43,5,25,53 };
+	for (auto it = num.begin(); it != num.end(); ++it)
+	{
+		*it *= 2;
+		cout << *it << " ";
+	}
+		
+}

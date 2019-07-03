@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main() //利用指针将数组元素重置为0
+{
+	int num[5]{ 2,5,3,4,4 };
+	
+	int* e = &num[5];
+	for (int* p = num; p != e; ++p)
+	{
+		cout << *p << "\t";
+		*p = 0;
+		cout << *p << endl;
+	}
+    
+}
